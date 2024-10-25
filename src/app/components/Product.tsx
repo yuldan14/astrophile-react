@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import anime from "animejs";
+import Image from "next/image";
 
 const Product = () => {
   const cardRefs = useRef<HTMLDivElement[]>([]); // Store references to each card
@@ -71,7 +72,12 @@ const Product = () => {
               className="border h-[25rem] w-[15rem] rounded-3xl bg-[#7b7f83] opacity-0" // Start with opacity 0
             >
               <div className="flex w-[100%] justify-center">
-                <img src="/Group 5.png" alt="Kaos Astrophile" />
+                <Image
+                  src="/Group 5.png" // Path gambar, pastikan sudah benar
+                  alt="Kaos Astrophile"
+                  width={400} // Tentukan lebar gambar
+                  height={400} // Tentukan tinggi gambar
+                />{" "}
               </div>
               <div>
                 <b className="nunito pl-5">Kaos Astrophile</b>
