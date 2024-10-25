@@ -3,18 +3,18 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import anime from "animejs/lib/anime.es.js";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Pagination,
-  Navigation,
-  HashNavigation,
-  Autoplay,
-} from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import {
+//   Pagination,
+//   Navigation,
+//   HashNavigation,
+//   Autoplay,
+// } from "swiper/modules";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
 
 const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null); // Reference untuk elemen yang ingin dianimasikan dengan anime.js
