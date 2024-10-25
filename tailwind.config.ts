@@ -14,6 +14,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow'), // Tambahkan plugin text-shadow di sini
+  ],
 };
+
+// Ekspor konfigurasi dengan `export default` sesuai style TypeScript
 export default config;
