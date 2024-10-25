@@ -69,7 +69,7 @@ const Product = () => {
             <div
               key={index}
               ref={addCardRef} // Attach ref for animation
-              className="shadow-gray-500 shadow-md h-[12rem] sm:h-[25rem] w-40 sm:w-[15rem] rounded-3xl opacity-0" // Start with opacity 0
+              className="shadow-gray-500 shadow-md h-[15rem] sm:h-[25rem] w-40 sm:w-[15rem] rounded-3xl opacity-0" // Start with opacity 0
             >
               <div className="flex w-[100%] justify-center">
                 <Image
@@ -77,7 +77,7 @@ const Product = () => {
                   alt="Kaos Astrophile"
                   width={100} // Tentukan lebar gambar
                   height={100} // Tentukan tinggi gambar
-                  className="sm:h-[300px] sm:w-[300px] h-[100px] w-[100px]"
+                  className="sm:h-[300px] sm:w-[300px] h-[150px] w-[150px] aspect-auto object-contain"
                 />
               </div>
               <div className="w-[100%] ">
