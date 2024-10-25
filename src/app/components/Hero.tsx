@@ -97,7 +97,7 @@ const Hero = () => {
           width={300}
           height={300}
           alt="logo"
-          className="rounded-[50%] aspect-square object-cover relative right-10"
+          className="hidden md:flex rounded-[50%] aspect-square object-cover relative right-10"
           />
         </div>
       </div>

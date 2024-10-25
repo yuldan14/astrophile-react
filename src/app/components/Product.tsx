@@ -64,19 +64,20 @@ const Product = () => {
         </div>
       </div>
       <div className="flex w-[100%] h-[100%] justify-center flex-wrap mt-[3rem]">
-        <div className="w-[90%] flex flex-wrap gap-20">
+        <div className="w-[90%] flex flex-wrap gap-10 sm:gap-20">
           {[...Array(7)].map((_, index) => (
             <div
               key={index}
               ref={addCardRef} // Attach ref for animation
-              className="shadow-gray-500 shadow-md h-[25rem] w-[15rem] rounded-3xl opacity-0" // Start with opacity 0
+              className="shadow-gray-500 shadow-md h-[12rem] sm:h-[25rem] w-40 sm:w-[15rem] rounded-3xl opacity-0" // Start with opacity 0
             >
               <div className="flex w-[100%] justify-center">
                 <Image
                   src="/Group 5.png" // Path gambar, pastikan sudah benar
                   alt="Kaos Astrophile"
-                  width={400} // Tentukan lebar gambar
-                  height={400} // Tentukan tinggi gambar
+                  width={100} // Tentukan lebar gambar
+                  height={100} // Tentukan tinggi gambar
+                  className="sm:h-[300px] sm:w-[300px] h-[100px] w-[100px]"
                 />
               </div>
               <div className="w-[100%] ">
