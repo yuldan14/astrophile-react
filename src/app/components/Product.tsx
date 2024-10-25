@@ -3,12 +3,12 @@ import React, { useEffect, useRef, useState } from "react";
 import anime from "animejs";
 
 const Product = () => {
-  const cardRefs = useRef([]); // Store references to each card
-  const observerRef = useRef(null); // To store the observer instance
+  const cardRefs = useRef<HTMLDivElement[]>([]); // Store references to each card
+  const observerRef = useRef<IntersectionObserver | null>(null); // To store the observer instance
   const [animationTriggered, setAnimationTriggered] = useState(false); // Track if animation has run
 
   useEffect(() => {
-    const handleScrollAnimation = (entries) => {
+    const handleScrollAnimation = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !animationTriggered) {
           // Apply fade-in animation to each card when it comes into view
@@ -21,7 +21,7 @@ const Product = () => {
             delay: anime.stagger(200), // Add stagger effect to each card
           });
           setAnimationTriggered(true); // Set animationTriggered to true
-          observerRef.current.unobserve(entry.target); // Stop observing after animation
+          observerRef.current?.unobserve(entry.target); // Stop observing after animation
         }
       });
     };
@@ -49,7 +49,7 @@ const Product = () => {
   }, [animationTriggered]); // Run effect again if animationTriggered changes
 
   // Helper function to add card refs
-  const addCardRef = (el) => {
+  const addCardRef = (el: HTMLDivElement | null) => {
     if (el && !cardRefs.current.includes(el)) {
       cardRefs.current.push(el);
     }

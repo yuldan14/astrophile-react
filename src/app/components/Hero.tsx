@@ -20,14 +20,22 @@ const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null); // Reference untuk elemen yang ingin dianimasikan dengan anime.js
   const textRefs = useRef<HTMLHeadingElement[]>([]); // Array referensi untuk elemen teks
   textRefs.current = []; // Reset array pada setiap render
+  const buttonRefs = useRef<HTMLButtonElement[]>([]); // Store references to each button
 
-  const addToTextRefs = (el) => {
-    if (el && !textRefs.current.includes(el)) {
-      textRefs.current.push(el);
+
+  const addToTextRefs = (text: HTMLDivElement | null) => {
+    if (text && !textRefs.current.includes(text)) {
+      textRefs.current.push(text);
+    }
+  };
+  const addToButtonRefs = (button: HTMLButtonElement | null) => {
+    if (button && !buttonRefs.current.includes(button)) {
+      buttonRefs.current.push(button);
     }
   };
 
   useEffect(() => {
+    // Animation for image
     if (imageRef.current) {
       anime({
         targets: imageRef.current,
@@ -38,16 +46,33 @@ const Hero = () => {
       });
     }
 
-    if (textRefs.current) {
-      anime({
-        targets: textRefs.current,
-        opacity: [0, 1],
-        translateY: [-20, 0],
-        duration: 500,
-        easing: "easeOutQuad",
-        delay: anime.stagger(1000), // Menambahkan jeda antar elemen
-      });
-    }
+    // Animation for text elements
+    textRefs.current.forEach((text) => {
+      if (text) {
+        anime({
+          targets: text,
+          opacity: [0, 1],
+          translateY: [-20, 0],
+          duration: 500,
+          easing: "easeOutQuad",
+          delay: anime.stagger(500), // Menambahkan jeda antar elemen
+        });
+      }
+    });
+
+    // Animation for button elements
+    buttonRefs.current.forEach((button) => {
+      if (button) {
+        anime({
+          targets: button,
+          opacity: [0, 1],
+          translateY: [-20, 0],
+          duration: 500,
+          easing: "easeOutQuad",
+          delay: anime.stagger(500),
+        });
+      }
+    });
   }, []);
 
   return (
@@ -69,7 +94,7 @@ const Hero = () => {
             </h5>
             <button
               className="bg-[#4295c5] p-2 rounded-[10px] text-sm nunito pl-5 pr-5 mt-[3rem]"
-              ref={addToTextRefs}
+              ref={addToButtonRefs}
             >
               Beli Sekarang
             </button>
