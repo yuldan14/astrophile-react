@@ -18,8 +18,8 @@ html{
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f0e0e;
-    --foreground: #eee3e3;
+    --background: #efefef;
+    --foreground: #171717;
   }
 }
 .span{

@@ -69,7 +69,7 @@ const Product = () => {
             <div
               key={index}
               ref={addCardRef} // Attach ref for animation
-              className="border h-[25rem] w-[15rem] rounded-3xl bg-[#7b7f83] opacity-0" // Start with opacity 0
+              className="shadow-gray-500 shadow-md h-[25rem] w-[15rem] rounded-3xl opacity-0" // Start with opacity 0
             >
               <div className="flex w-[100%] justify-center">
                 <Image
@@ -77,13 +77,20 @@ const Product = () => {
                   alt="Kaos Astrophile"
                   width={400} // Tentukan lebar gambar
                   height={400} // Tentukan tinggi gambar
-                />{" "}
+                />
               </div>
-              <div>
-                <b className="nunito pl-5">Kaos Astrophile</b>
-                <button className="ml-5 mt-4 p-1 pl-5 pr-5 bg-[#4295c5] rounded-xl font-sans hover:bg-sky-950 transition-all duration-300">
-                  Beli Sekarang
-                </button>
+              <div className="w-[100%] ">
+                <b className="nunito pl-5 block">Kaos Astrophile</b>
+                <div className="flex w-100%  justify-center ">
+                  <button className=" mt-4 p-1 pl-5  pr-5 bg-[#4295c5] rounded-xl font-sans hover:bg-sky-950 transition-all duration-300">
+                    <Image
+                      src="/shopping-cart.svg"
+                      width={20}
+                      height={20}
+                      alt="Beli"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
