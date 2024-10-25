@@ -35,7 +35,6 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    // Animation for image
     if (imageRef.current) {
       anime({
         targets: imageRef.current,
@@ -46,33 +45,26 @@ const Hero = () => {
       });
     }
 
-    // Animation for text elements
-    textRefs.current.forEach((text) => {
-      if (text) {
-        anime({
-          targets: text,
-          opacity: [0, 1],
-          translateY: [-20, 0],
-          duration: 500,
-          easing: "easeOutQuad",
-          delay: anime.stagger(500), // Menambahkan jeda antar elemen
-        });
-      }
-    });
-
-    // Animation for button elements
-    buttonRefs.current.forEach((button) => {
-      if (button) {
-        anime({
-          targets: button,
-          opacity: [0, 1],
-          translateY: [-20, 0],
-          duration: 500,
-          easing: "easeOutQuad",
-          delay: anime.stagger(500),
-        });
-      }
-    });
+    if (textRefs.current) {
+      anime({
+        targets: textRefs.current,
+        opacity: [0, 1],
+        translateY: [-20, 0],
+        duration: 500,
+        easing: "easeOutQuad",
+        delay: anime.stagger(1000), // Menambahkan jeda antar elemen
+      });
+    }
+    if(buttonRefs.current){
+      anime({
+        targets: buttonRefs.current,
+        opacity: [0, 1],
+        translateY: [-20, 0],
+        duration: 500,
+        easing: "easeOutQuad",
+        delay: 1500, // Menambahkan jeda antar elemen
+      })
+    }
   }, []);
 
   return (
