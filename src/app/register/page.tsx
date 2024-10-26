@@ -34,7 +34,7 @@ const RegisterPage = () => {
     setError('');
 
     // Check for required fields
-    const requiredFields = ['username', 'email', 'firstName', 'lastName', 'phoneNumber', 'address'];
+    const requiredFields: (keyof typeof formData)[] = ['username', 'email', 'firstName', 'lastName', 'phoneNumber', 'address'];
     for (const field of requiredFields) {
       if (!formData[field]) {
         setError(`Please fill in all fields. Missing: ${field}`);
