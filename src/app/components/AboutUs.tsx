@@ -61,15 +61,15 @@ const AboutUs = () => {
       </div>
       <div className="h-[100%] -mt-10 sm:mt-0">
         <div className="flex justify-around mt-[5rem] h-[80vh] ">
-          <div className=" block sm:flex justify-around w-[100%] flex-wrap sm:flex-nowrap">
-            <div ref={addToImageRefs} className="flex sm:block">
-              <div className="flex justify-center mb-[3rem] sm:mb-0 ml-[2rem] sm:ml-0">
+          <div className=" block md:flex justify-around w-[100%] flex-wrap sm:flex-nowrap">
+            <div ref={addToImageRefs} className="flex md:block">
+              <div className="flex justify-center mb-[3rem] md:mb-0 ml-[2rem] md:ml-0">
                 <Image
                   src="/yuldan.jpg"
                   height={200}
                   width={200}
                   alt="yuldan"
-                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[2rem] sm:mr-0"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[3rem] md:mr-0"
                 />
               </div>
               <div>
@@ -79,14 +79,14 @@ const AboutUs = () => {
                 <p className="font-sans w-[100%] text-center">Web Developer</p>
               </div>
             </div>
-            <div ref={addToImageRefs} className="flex sm:block">
-              <div className="flex justify-center mb-[3rem] sm:mb-0 ml-[2rem] sm:ml-0 ">
+            <div ref={addToImageRefs} className="flex md:block">
+              <div className="flex justify-center mb-[3rem] md:mb-0 ml-[2rem] md:ml-0 ">
                 <Image
                   src="/Sandi.jpg"
                   height={200}
                   width={200}
                   alt="sandi"
-                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[2rem] sm:mr-0"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[3rem] md:mr-0"
                 />
               </div>
               <div>
@@ -96,14 +96,14 @@ const AboutUs = () => {
                 <p className="font-sans w-[100%] text-center">Designer</p>
               </div>
             </div>
-            <div ref={addToImageRefs} className="flex sm:block">
-              <div className="flex justify-center mb-[3rem] sm:mb-0 ml-[2rem] sm:ml-0">
+            <div ref={addToImageRefs} className="flex md:block">
+              <div className="flex justify-center mb-[3rem] md:mb-0 ml-[2rem] md:ml-0">
                 <Image
                   src="/Ridwan.jpg"
                   height={200}
                   width={200}
                   alt="ridwan"
-                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[2rem] sm:mr-0"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[3rem] md:mr-0"
                 />
               </div>
               <div>
