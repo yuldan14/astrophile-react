@@ -83,7 +83,7 @@ const Product = () => {
               <div className="w-[100%] ">
                 <b className="nunito pl-5 block">Kaos Astrophile</b>
                 <div className="flex w-100%  justify-center ">
-                  <button className=" mt-4 p-1 pl-5  pr-5 bg-[#4295c5] rounded-xl font-sans hover:bg-sky-950 transition-all duration-300">
+                  <button className=" mt-4 p-1 pl-5  pr-5 bg-[#4295c5] rounded-xl font-sans hover:bg-[#3f80cf] transition-all duration-300">
                     <Image
                       src="/shopping-cart.svg"
                       width={20}

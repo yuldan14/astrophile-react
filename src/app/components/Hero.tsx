@@ -6,20 +6,11 @@ import anime from "animejs/lib/anime.es.js";
 const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   const textRefs = useRef<HTMLHeadingElement[]>([]);
-  const buttonRefs = useRef<HTMLButtonElement[]>([]);
-  
-  textRefs.current = [];
-  buttonRefs.current = [];
-  
+  const buttonRef = useRef<HTMLButtonElement | null>(null); // Use single ref for the button
+
   const addToTextRefs = (text: HTMLHeadingElement | null) => {
     if (text && !textRefs.current.includes(text)) {
       textRefs.current.push(text);
-    }
-  };
-
-  const addToButtonRefs = (button: HTMLButtonElement | null) => {
-    if (button && !buttonRefs.current.includes(button)) {
-      buttonRefs.current.push(button);
     }
   };
 
@@ -39,6 +30,7 @@ const Hero = () => {
       }
     }, typingSpeed);
 
+    // Initial animations for image and text
     if (imageRef.current) {
       anime({
         targets: imageRef.current,
@@ -60,19 +52,45 @@ const Hero = () => {
       });
     }
 
-    if (buttonRefs.current) {
-      anime({
-        targets: buttonRefs.current,
-        opacity: [0, 1],
-        translateY: [-20, 0],
-        duration: 500,
-        easing: "easeOutQuad",
-        delay: 1500,
-      });
-    }
-
     return () => clearInterval(typingInterval); // Clean up interval on unmount
   }, []);
+
+  const handleButtonClick = () => {
+    // Scale down and then back up when clicked
+    anime({
+      targets: buttonRef.current,
+      scale: 0.8,
+      duration: 500,
+      
+      
+    });
+
+    // Scroll to the "Product" section after the animation
+    const productSection = document.getElementById("Product");
+    if (productSection) {
+      productSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleMouseDown = () => {
+    // Scale down the button when clicked or held
+    anime({
+      targets: buttonRef.current,
+      scale: 0.8,
+      duration: 200,
+      easing: "easeInOutSine",
+    });
+  };
+
+  const handleMouseUp = () => {
+    // Scale back to original size when released
+    anime({
+      targets: buttonRef.current,
+      scale: 1,
+      duration: 200,
+      easing: "easeInOutSine",
+    });
+  };
 
   return (
     <div
@@ -95,10 +113,14 @@ const Hero = () => {
               Starry Accessories for Starry Minds Shop Now at Astrophile!
             </h5>
             <button
-              className="bg-[#4295c5] p-2 rounded-[10px] text-sm nunito pl-5 pr-5 mt-[3rem] hover:bg-cyan-950 hover:text-white transition-all duration-500"
-              ref={addToButtonRefs}
+              className="bg-[#002d64] p-2 rounded-[10px] text-sm nunito pl-5 pr-5 mt-[3rem] hover:bg-[#3f80cf] hover:text-white transition-all duration-500 text-white"
+              ref={buttonRef} // Use single ref for button
+              onClick={handleButtonClick} // Handle button click
+              onMouseDown={handleMouseDown} // Handle mouse down event
+              onMouseUp={handleMouseUp} // Handle mouse up event
+              onMouseLeave={handleMouseUp} // Ensure scaling back if mouse leaves
             >
-              <a href="#Product">Beli Sekarang</a>
+              Beli Sekarang
             </button>
           </div>
         </div>

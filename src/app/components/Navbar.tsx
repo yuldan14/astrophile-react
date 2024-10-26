@@ -20,9 +20,9 @@ const Navbar = () => {
                 </div>
                 <div className='w-[100%] items-center'>
                     <ul className='flex justify-around h-[100%] items-center'>
-                        <li className='text-[.60rem] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] hover:text-white cursor-pointer transition-all duration-500 hover:bg-[#002d64] p-1 pl-5 pr-5 rounded-3xl'><a href="#Hero">Home</a></li>
-                        <li className='text-[.60rem] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] hover:text-white cursor-pointer transition-all duration-500 hover:bg-[#002d64] p-1 pl-5 pr-5 rounded-3xl'> <a href="#Product">Product</a></li>
-                        <li className='text-[.60rem] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] hover:text-white cursor-pointer transition-all duration-500 hover:bg-[#002d64] p-1 pl-5 pr-5 rounded-3xl'><a href="#AboutUs">About Us</a></li>
+                        <li className='text-[.60rem] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] hover:text-white cursor-pointer transition-all duration-500 hover:bg-[#3f80cf] p-1 pl-5 pr-5 rounded-3xl'><a href="#Hero">Home</a></li>
+                        <li className='text-[.60rem] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] hover:text-white cursor-pointer transition-all duration-500 hover:bg-[#3f80cf] p-1 pl-5 pr-5 rounded-3xl'> <a href="#Product">Product</a></li>
+                        <li className='text-[.60rem] sm:text-[1rem] md:text-[1rem] lg:text-[1rem] hover:text-white cursor-pointer transition-all duration-500 hover:bg-[#3f80cf] p-1 pl-5 pr-5 rounded-3xl'><a href="#AboutUs">About Us</a></li>
                         
                     </ul>
                 </div>
