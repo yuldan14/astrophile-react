@@ -18,7 +18,7 @@ const Navbar = () => {
     <main>
       <div className="relative items-center h-[5rem] nunito flex justify-center bg-transparent w-[100%]">
         <div className="flex top-0 sticky z-10 w-[90%] h-[3.4rem] bg-[#002d64] rounded-3xl text-white">
-          <div className="w-20% sm:w-[50%] flex">
+          <div className="  w-[5rem] sm:w-[5rem] flex">
             <Image
               className="rounded-[1.4rem] object-cover aspect-square flex h-[3.4rem] w-[3.4rem]"
               src="/logo1.png"
