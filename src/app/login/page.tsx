@@ -1,10 +1,8 @@
-// src/app/login/page.tsx
-
 'use client';
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link'; // Import Link from Next.js
+import Link from 'next/link';
 
 const Login: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +10,6 @@ const Login: React.FC = () => {
     password: '',
   });
   const [error, setError] = useState('');
-
   const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,18 +25,45 @@ const Login: React.FC = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Add your login logic here
+    // Validate input
     if (formData.username === '' || formData.password === '') {
       setError('Please fill in all fields.');
       return;
     }
 
-    console.log('Logging in with:', formData);
-    // Redirect to a different page upon successful login
-    router.push('/'); // Uncomment this line for actual redirection
+    try {
+      // Send login request to the API
+      const response = await fetch('https://8181-202-46-68-26.ngrok-free.app/api/v1/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: formData.username,
+          password: formData.password,
+        }),
+      });
+
+      if (!response.ok) {
+        // Handle error response from the API
+        const errorData = await response.json();
+        setError(errorData.message || 'Login failed!');
+        return;
+      }
+
+      // Optionally, handle successful login (e.g., save token, user data)
+      const data = await response.json();
+      console.log('Login successful:', data);
+
+      // Redirect to the home page after successful login
+      router.push('/');
+    } catch (err) {
+      setError('An error occurred while logging in. Please try again.');
+      console.error('Login error:', err);
+    }
   };
 
   return (
