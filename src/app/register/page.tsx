@@ -16,7 +16,6 @@ const Register: React.FC = () => {
     phoneNumber: '',
     address: '',
   });
-  const [error, setError] = useState('');
   const [passwordMismatch, setPasswordMismatch] = useState(false);
 
   const router = useRouter();
@@ -31,7 +30,6 @@ const Register: React.FC = () => {
     // Reset error if password fields are being edited
     if (name === 'password' || name === 'confirmPassword') {
       setPasswordMismatch(false);
-      setError('');
     }
   };
 
@@ -41,12 +39,10 @@ const Register: React.FC = () => {
     // Check if passwords match
     if (formData.password !== formData.confirmPassword) {
       setPasswordMismatch(true);
-      setError('Passwords do not match.');
       return;
     }
 
     // Proceed with registration logic (e.g., API call)
-    // Example:
     console.log('Registered successfully:', formData);
     router.push('/login'); // Redirect to the login page upon successful registration
   };
