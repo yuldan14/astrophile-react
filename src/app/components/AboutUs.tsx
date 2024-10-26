@@ -59,47 +59,55 @@ const AboutUs = () => {
           About <span className="span">Us</span>
         </p>
       </div>
-      <div className="h-[100vh]">
-        <div className="flex justify-around items-center h-[80vh] ">
+      <div className="h-[100%]">
+        <div className="flex justify-around mt-[5rem] h-[80vh] ">
           <div className="flex justify-around w-[100%]">
             <div ref={addToImageRefs}>
-              <Image
-                src="/yuldan.jpg"
-                height={200}
-                width={200}
-                alt="yuldan"
-                className="rounded-[50%] object-cover aspect-square w-[200px] h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
-              />
-              <p className="nunito mt-10 text-center">
+              <div className="flex justify-center">
+                <Image
+                  src="/yuldan.jpg"
+                  height={200}
+                  width={200}
+                  alt="yuldan"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
+                />
+              </div>
+              <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg">
                 <span className="span">YULDAN</span> NUR ADDINSYAH
               </p>
               <p className="font-sans w-[100%] text-center">Web Developer</p>
             </div>
             <div ref={addToImageRefs}>
-              <Image
-                src="/Sandi.jpg"
-                height={200}
-                width={200}
-                alt="Sandi"
-                className="rounded-[50%] object-cover aspect-square w-[200px] h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
-              />
-              <p className="nunito mt-10 text-center">
+              <div className="flex justify-center">
+                <Image
+                  src="/Sandi.jpg"
+                  height={200}
+                  width={200}
+                  alt="Sandi"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
+                />
+              </div>
+              <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg">
                 <span className="span">SANDI</span> DIAN GUNAWAN
               </p>
               <p className="font-sans w-[100%] text-center">Designer</p>
             </div>
             <div ref={addToImageRefs}>
-              <Image
-                src="/Ridwan.jpg"
-                height={200}
-                width={200}
-                alt="yuldan"
-                className="rounded-[50%] object-cover aspect-square w-[200px] h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
-              />
-              <p className="nunito mt-10 text-center">
-                <span className="span">RIDWAN</span> MUHAMMAD RAIHAN
+              <div className="flex justify-center">
+                <Image
+                  src="/Ridwan.jpg"
+                  height={200}
+                  width={200}
+                  alt="yuldan"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
+                />
+              </div>
+              <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg">
+                <span className="span ">RIDWAN</span> MUHAMMAD RAIHAN
               </p>
-              <p className="font-sans w-[100%] text-center">Database Engineer</p>
+              <p className="font-sans w-[100%] text-center">
+                Database Engineer
+              </p>
             </div>
           </div>
         </div>
