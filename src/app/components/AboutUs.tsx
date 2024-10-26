@@ -56,7 +56,7 @@ const AboutUs = () => {
     <div id="AboutUs" className="h-[100%] w-[100%] pt-[4.2rem]">
       <div className="nunito w-[100%] flex justify-center text-3xl">
         <p>
-          About <span className="span">Us</span>
+          ABOUT <span className="span">US</span>
         </p>
       </div>
       <div className="h-[100%] -mt-10 sm:mt-0">
@@ -72,7 +72,7 @@ const AboutUs = () => {
                   className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[3rem] md:mr-0"
                 />
               </div>
-              <div>
+              <div className="w-[70%] md:w-[100%]">
                 <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
                   <span className="span">YULDAN</span> NUR ADDINSYAH
                 </p>
@@ -89,7 +89,7 @@ const AboutUs = () => {
                   className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[3rem] md:mr-0"
                 />
               </div>
-              <div>
+              <div className="w-[70%] md:w-[100%]">
                 <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
                   <span className="span">SANDI</span> DIAN GUNAWAN
                 </p>
@@ -106,7 +106,7 @@ const AboutUs = () => {
                   className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[3rem] md:mr-0"
                 />
               </div>
-              <div>
+              <div className="w-[70%] md:w-[100%]">
                 <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
                   <span className="span">RIDWAN</span> MUHAMMAD RAIHAN
                 </p>
