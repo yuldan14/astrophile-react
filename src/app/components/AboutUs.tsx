@@ -59,56 +59,61 @@ const AboutUs = () => {
           About <span className="span">Us</span>
         </p>
       </div>
-      <div className="h-[100%]">
+      <div className="h-[100%] -mt-10 sm:mt-0">
         <div className="flex justify-around mt-[5rem] h-[80vh] ">
-          <div className="flex justify-around w-[100%]">
-            <div ref={addToImageRefs}>
-              <div className="flex justify-center">
+          <div className=" block sm:flex justify-around w-[100%] flex-wrap sm:flex-nowrap">
+            <div ref={addToImageRefs} className="flex sm:block">
+              <div className="flex justify-center mb-[3rem] sm:mb-0 ml-[2rem] sm:ml-0">
                 <Image
                   src="/yuldan.jpg"
                   height={200}
                   width={200}
                   alt="yuldan"
-                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[2rem] sm:mr-0"
                 />
               </div>
-              <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg">
-                <span className="span">YULDAN</span> NUR ADDINSYAH
-              </p>
-              <p className="font-sans w-[100%] text-center">Web Developer</p>
+              <div>
+                <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
+                  <span className="span">YULDAN</span> NUR ADDINSYAH
+                </p>
+                <p className="font-sans w-[100%] text-center">Web Developer</p>
+              </div>
             </div>
-            <div ref={addToImageRefs}>
-              <div className="flex justify-center">
+            <div ref={addToImageRefs} className="flex sm:block">
+              <div className="flex justify-center mb-[3rem] sm:mb-0 ml-[2rem] sm:ml-0 ">
                 <Image
                   src="/Sandi.jpg"
                   height={200}
                   width={200}
-                  alt="Sandi"
-                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
+                  alt="sandi"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[2rem] sm:mr-0"
                 />
               </div>
-              <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg">
-                <span className="span">SANDI</span> DIAN GUNAWAN
-              </p>
-              <p className="font-sans w-[100%] text-center">Designer</p>
+              <div>
+                <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
+                  <span className="span">SANDI</span> DIAN GUNAWAN
+                </p>
+                <p className="font-sans w-[100%] text-center">Designer</p>
+              </div>
             </div>
-            <div ref={addToImageRefs}>
-              <div className="flex justify-center">
+            <div ref={addToImageRefs} className="flex sm:block">
+              <div className="flex justify-center mb-[3rem] sm:mb-0 ml-[2rem] sm:ml-0">
                 <Image
                   src="/Ridwan.jpg"
                   height={200}
                   width={200}
-                  alt="yuldan"
-                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl"
+                  alt="ridwan"
+                  className="rounded-[50%] object-cover aspect-square w-[100px] h-[100px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px] shadow-lg shadow-gray-400 drop-shadow-xl mr-[2rem] sm:mr-0"
                 />
               </div>
-              <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg">
-                <span className="span ">RIDWAN</span> MUHAMMAD RAIHAN
-              </p>
-              <p className="font-sans w-[100%] text-center">
-                Database Engineer
-              </p>
+              <div>
+                <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
+                  <span className="span">RIDWAN</span> MUHAMMAD RAIHAN
+                </p>
+                <p className="font-sans w-[100%] text-center">Database Engineer</p>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
