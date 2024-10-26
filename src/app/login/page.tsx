@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link'; // Import Link from Next.js
 
 const Login: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -77,6 +78,14 @@ const Login: React.FC = () => {
         >
           Login
         </button>
+
+        {/* Add the register link here */}
+        <p className="mt-4 text-sm text-center">
+          Belum punya akun?{" "}
+          <Link href="/register" className="text-blue-600 hover:underline">
+            Register
+          </Link>
+        </p>
       </form>
     </div>
   );
