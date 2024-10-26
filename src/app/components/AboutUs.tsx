@@ -76,7 +76,7 @@ const AboutUs = () => {
                 <p className="nunito mt-10 text-center text-sm sm:text-lg md:text-lg lg:text-lg 2 w-[100%] ">
                   <span className="span">YULDAN</span> NUR ADDINSYAH
                 </p>
-                <p className="font-sans w-[100%] text-center">Web Developer</p>
+                <p className="font-sans w-[100%] text-center">Frontend Developer</p>
               </div>
             </div>
             <div ref={addToImageRefs} className="flex md:block">
@@ -110,7 +110,7 @@ const AboutUs = () => {
                 <p className="nunito mt-10 text-center text-sm sm:text-lg md:text-lg lg:text-lg 2 w-[100%]">
                   <span className="span">RIDWAN</span> MUHAMMAD RAIHAN
                 </p>
-                <p className="font-sans w-[100%] text-center">Database Engineer</p>
+                <p className="font-sans w-[100%] text-center">Backend Developer</p>
               </div>
             </div>
             
