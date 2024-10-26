@@ -38,7 +38,7 @@ const Login: React.FC = () => {
 
     console.log('Logging in with:', formData);
     // Redirect to a different page upon successful login
-    // router.push('/some-protected-route'); // Uncomment this line for actual redirection
+    router.push('/'); // Uncomment this line for actual redirection
   };
 
   return (
