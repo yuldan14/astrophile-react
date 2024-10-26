@@ -59,9 +59,9 @@ const Hero = () => {
     // Scale down and then back up when clicked
     anime({
       targets: buttonRef.current,
-      scale: 0.8,
+      scale: [0.8, 1],
       duration: 500,
-      
+
       
     });
 
