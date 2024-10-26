@@ -60,7 +60,7 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="h-[100%] -mt-10 sm:mt-0">
-        <div className="flex justify-around mt-[5rem] h-[80vh] ">
+        <div className="flex justify-around mt-[5rem] h-[60vh] ">
           <div className=" block md:flex justify-around w-[100%] flex-wrap sm:flex-nowrap">
             <div ref={addToImageRefs} className="flex md:block">
               <div className="flex justify-center mb-[3rem] md:mb-0 ml-[2rem] md:ml-0">
@@ -73,7 +73,7 @@ const AboutUs = () => {
                 />
               </div>
               <div className="w-[70%] md:w-[100%]">
-                <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
+                <p className="nunito mt-10 text-center text-sm sm:text-lg md:text-lg lg:text-lg 2 w-[100%] ">
                   <span className="span">YULDAN</span> NUR ADDINSYAH
                 </p>
                 <p className="font-sans w-[100%] text-center">Web Developer</p>
@@ -90,7 +90,7 @@ const AboutUs = () => {
                 />
               </div>
               <div className="w-[70%] md:w-[100%]">
-                <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
+                <p className="nunito mt-10 text-center text-sm sm:text-lg md:text-lg lg:text-lg 2 w-[100%]">
                   <span className="span">SANDI</span> DIAN GUNAWAN
                 </p>
                 <p className="font-sans w-[100%] text-center">Designer</p>
@@ -107,7 +107,7 @@ const AboutUs = () => {
                 />
               </div>
               <div className="w-[70%] md:w-[100%]">
-                <p className="nunito mt-10 text-center text-sm md:text-md lg:text-lg 2 w-[100%]">
+                <p className="nunito mt-10 text-center text-sm sm:text-lg md:text-lg lg:text-lg 2 w-[100%]">
                   <span className="span">RIDWAN</span> MUHAMMAD RAIHAN
                 </p>
                 <p className="font-sans w-[100%] text-center">Database Engineer</p>
