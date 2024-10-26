@@ -65,7 +65,7 @@ const Product = () => {
       </div>
       <div className="flex w-[100%] h-[100%] justify-center flex-wrap mt-[3rem]">
         <div className="w-[90%] flex flex-wrap gap-10 sm:gap-20">
-          {[...Array(7)].map((_, index) => (
+          {[...Array(8)].map((_, index) => (
             <div
               key={index}
               ref={addCardRef} // Attach ref for animation
