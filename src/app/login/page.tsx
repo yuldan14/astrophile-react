@@ -1,75 +1,83 @@
+// src/app/login/page.tsx
+
 'use client';
+
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const Login = () => {
-  const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const Login: React.FC = () => {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
   const [error, setError] = useState('');
 
-  const handleLogin = (e: React.FormEvent) => {
+  const router = useRouter();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    // Reset error on change
+    if (error) {
+      setError('');
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Sederhana: contoh validasi email dan password kosong
-    if (!email || !password) {
-      setError('Please enter both email and password');
+    // Add your login logic here
+    if (formData.username === '' || formData.password === '') {
+      setError('Please fill in all fields.');
       return;
     }
 
-    // Implementasi autentikasi seharusnya ada di sini
-    // Untuk sementara, kita redirect ke halaman Home sebagai contoh
-    router.push('/');
+    console.log('Logging in with:', formData);
+    // Redirect to a different page upon successful login
+    // router.push('/some-protected-route'); // Uncomment this line for actual redirection
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 space-y-4 bg-white rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold text-center text-[#002d64]">Login to Astrophile</h2>
+    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-6 rounded-lg shadow-md w-full max-w-md"
+      >
+        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
 
-        {error && (
-          <p className="text-sm text-red-500 text-center">
-            {error}
-          </p>
-        )}
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={formData.username}
+          onChange={handleChange}
+          className="mb-4 w-full p-2 border rounded"
+          required
+        />
 
-        <form onSubmit={handleLogin} className="space-y-4">
-          <div>
-            <label className="block mb-2 text-sm font-medium text-gray-600">Email</label>
-            <input
-              type="email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#002d64]"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+          className="mb-4 w-full p-2 border rounded"
+          required
+        />
 
-          <div>
-            <label className="block mb-2 text-sm font-medium text-gray-600">Password</label>
-            <input
-              type="password"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#002d64]"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
+        {error && <p className="text-sm text-red-600 mt-1">{error}</p>}
 
-          <button
-            type="submit"
-            className="w-full px-4 py-2 font-semibold text-white bg-[#002d64] rounded-lg hover:bg-[#3f80cf] transition-all duration-300"
-          >
-            Log In
-          </button>
-        </form>
-
-        <p className="text-center text-gray-600 text-sm">
-          Don't have an account? <a href="/register" className="text-[#002d64] hover:underline">Register here</a>
-        </p>
-      </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition-colors"
+        >
+          Login
+        </button>
+      </form>
     </div>
   );
 };
