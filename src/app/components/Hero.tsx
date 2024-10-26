@@ -87,7 +87,7 @@ const Hero = () => {
               className="bg-[#4295c5] p-2 rounded-[10px] text-sm nunito pl-5 pr-5 mt-[3rem] hover:bg-cyan-950 hover:text-white transition-all duration-500"
               ref={addToButtonRefs}
             >
-              Beli Sekarang
+              <a href="#Product">Beli Sekarang</a>
             </button>
           </div>
         </div>
