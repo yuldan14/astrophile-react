@@ -1,5 +1,3 @@
-// app/register/page.tsx
-
 'use client';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -29,7 +27,7 @@ const RegisterPage = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -48,10 +46,40 @@ const RegisterPage = () => {
       return;
     }
 
-    console.log('Form submitted:', formData);
-    
-    // Redirect to login page after registration
-    router.push('/login');
+    // Prepare the request body
+    const requestBody = {
+      username: formData.username,
+      password: formData.password,
+      email: formData.email,
+      telephoneNum: formData.phoneNumber, // Adjust according to your API
+    };
+
+    try {
+      // Send registration request to the API
+      const response = await fetch('https://8181-202-46-68-26.ngrok-free.app/api/v1/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        // Handle error response from the API
+        const errorData = await response.json();
+        setError(errorData.message || 'Registration failed!');
+        return;
+      }
+
+      // Handle successful registration (e.g., show success message, redirect)
+      console.log('Registration successful:', await response.json());
+
+      // Redirect to login page after successful registration
+      router.push('/login');
+    } catch (err) {
+      setError('An error occurred while registering. Please try again.');
+      console.error('Registration error:', err);
+    }
   };
 
   const isPasswordMatch = formData.password === formData.confirmPassword || !formData.confirmPassword;

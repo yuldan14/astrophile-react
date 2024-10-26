@@ -47,8 +47,14 @@ const Login: React.FC = () => {
         }),
       });
 
+      if (response.status === 401) {
+        // Set custom message for unauthorized access
+        setError('Email atau kata sandi salah.'); // Custom message for incorrect login
+        return;
+      }
+
       if (!response.ok) {
-        // Handle error response from the API
+        // Handle other error responses from the API
         const errorData = await response.json();
         setError(errorData.message || 'Login failed!');
         return;
