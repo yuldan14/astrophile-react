@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #efefef;
+  --foreground: #171717;
+}
+html{
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: 'NunitoSans';
+  src: url(./fonts/NunitoSans.ttf);
+}
+.nunito{
+  font-family: 'NunitoSans';
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #efefef;
+    --foreground: #171717;
+  }
+}
+.span{
+  color: #4295c5;
+}
+.main{
+  color: #002d64;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.aktif{
+  background-color: #002d64;
+  color: white;
+}
