@@ -50,7 +50,7 @@ export function Hero() {
         translateY: [-20, 0],
         duration: 500,
         easing: "easeOutQuad",
-        delay: anime.stagger(1000),
+        delay: anime.stagger(2000),
       });
     }
 
@@ -92,12 +92,12 @@ export function Hero() {
     });
   };
   return (
-    <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 bg-black h-full pb-10 relative -top-[5rem] rounded-b-3xl">
+    <BackgroundLines className="flex items-center justify-center w-full flex-col px-4  h-full pb-10 bg-gradient-to-tr from-sky-900 to-black relative -top-[5rem] rounded-b-3xl">
       <div
         className="h-[100%] w-[100%] flex justify-center items-center pt-[4.2rem] relative -top-[4.2rem]"
         id="Hero"
       >
-        <div className="h-[90vh] w-[90vw] rounded-3xl shadow-2xl flex text-white">
+        <div className="h-[90vh] w-[90vw] rounded-3xl flex text-white">
           <div className="w-[100%] h-[100%] justify-center text-center flex items-center p-10 text-2xl ">
             <div>
               <h1
